@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "r3f-first-attempt/static/css/main.62ba00b5.chunk.css",
-    "main.js": "r3f-first-attempt/static/js/main.16485acf.chunk.js",
-    "main.js.map": "r3f-first-attempt/static/js/main.16485acf.chunk.js.map",
-    "runtime-main.js": "r3f-first-attempt/static/js/runtime-main.0e73bfeb.js",
-    "runtime-main.js.map": "r3f-first-attempt/static/js/runtime-main.0e73bfeb.js.map",
-    "static/js/2.62071de7.chunk.js": "r3f-first-attempt/static/js/2.62071de7.chunk.js",
-    "static/js/2.62071de7.chunk.js.map": "r3f-first-attempt/static/js/2.62071de7.chunk.js.map",
-    "static/js/3.a417c9c8.chunk.js": "r3f-first-attempt/static/js/3.a417c9c8.chunk.js",
-    "static/js/3.a417c9c8.chunk.js.map": "r3f-first-attempt/static/js/3.a417c9c8.chunk.js.map",
-    "index.html": "r3f-first-attempt/index.html",
-    "static/css/main.62ba00b5.chunk.css.map": "r3f-first-attempt/static/css/main.62ba00b5.chunk.css.map",
-    "static/js/2.62071de7.chunk.js.LICENSE.txt": "r3f-first-attempt/static/js/2.62071de7.chunk.js.LICENSE.txt"
+    "main.css": "/r3f-first-attempt/static/css/main.62ba00b5.chunk.css",
+    "main.js": "/r3f-first-attempt/static/js/main.07a7b741.chunk.js",
+    "main.js.map": "/r3f-first-attempt/static/js/main.07a7b741.chunk.js.map",
+    "runtime-main.js": "/r3f-first-attempt/static/js/runtime-main.16874c8b.js",
+    "runtime-main.js.map": "/r3f-first-attempt/static/js/runtime-main.16874c8b.js.map",
+    "static/js/2.62071de7.chunk.js": "/r3f-first-attempt/static/js/2.62071de7.chunk.js",
+    "static/js/2.62071de7.chunk.js.map": "/r3f-first-attempt/static/js/2.62071de7.chunk.js.map",
+    "static/js/3.a417c9c8.chunk.js": "/r3f-first-attempt/static/js/3.a417c9c8.chunk.js",
+    "static/js/3.a417c9c8.chunk.js.map": "/r3f-first-attempt/static/js/3.a417c9c8.chunk.js.map",
+    "index.html": "/r3f-first-attempt/index.html",
+    "static/css/main.62ba00b5.chunk.css.map": "/r3f-first-attempt/static/css/main.62ba00b5.chunk.css.map",
+    "static/js/2.62071de7.chunk.js.LICENSE.txt": "/r3f-first-attempt/static/js/2.62071de7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0e73bfeb.js",
+    "static/js/runtime-main.16874c8b.js",
     "static/js/2.62071de7.chunk.js",
     "static/css/main.62ba00b5.chunk.css",
-    "static/js/main.16485acf.chunk.js"
+    "static/js/main.07a7b741.chunk.js"
   ]
 }
