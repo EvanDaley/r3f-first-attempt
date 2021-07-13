@@ -2,7 +2,7 @@
   "name": "r3f-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://evandaley.github.io/r3f-first-attempt/",
   "dependencies": {
     "@react-spring/core": "^9.1.2",
     "@react-spring/three": "^9.1.2",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "react-scripts start",
+    "dev": "PUBLIC_URL=/ react-scripts start",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
     "ship": "npm run build && npm run deploy",
