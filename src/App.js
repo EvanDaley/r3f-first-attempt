@@ -1,24 +1,36 @@
 import './App.css';
-import Box from './components/Box';
-import Stork from './Stork'
-import { OrbitControls, Stats, Html } from '@react-three/drei';
+import Monkey from './components/Monkey'
+import { OrbitControls, Stats, Html, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react'
+
+// Environment options:
+//   sunset
+//   dawn
+//   night
+//   warehouse
+//   forest
+//   apartment
+//   studio
+//   city
+//   park
+//   lobby
 
 function App() {
   return (
     <>
-      <Canvas>
+      <Canvas colorManagement={true} invalidateFrameloop pixelRatio={[1, 2]} camera={{ position: [0, 0, 2.75] }}>
+        <directionalLight position={[10, 10, 5]} intensity={1} />
+        <directionalLight position={[-10, -10, -5]} intensity={1} />
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <OrbitControls />
         <Suspense fallback={<Html>loading..</Html>}>
-          <Stork/>
-        </Suspense>
+          <Stage environment="sunset" intensity={.5} contactShadow={true} shadows={true}>
+            <Monkey />
 
-        <Box position={[1.2, 0, 0]} />
-        <Box position={[-1.2, 2.2, 0]} />
-        <Box position={[1.2, 2.2, 0]} />
+          </Stage>
+        </Suspense>
         <Stats />
       </Canvas>
     </>
