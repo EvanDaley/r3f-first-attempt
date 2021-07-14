@@ -1,6 +1,5 @@
 import './App.css';
 import Box from './components/Box';
-import Robot from './components/Robot';
 import Stork from './Stork'
 import { OrbitControls, Stats, Html } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
