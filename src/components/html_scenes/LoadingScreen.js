@@ -16,11 +16,11 @@ export default function LoadingScreen(props) {
   return (
     <div styles="position: absolute">
       <animated.span className="open-sans tera ls-xlarge bold">
-        {skillValue.interpolate(val => val.toFixed(2))}
+        {skillValue.to(val => val.toFixed(2))}
       </animated.span>
       <br></br>
       <animated.div style={props}>I will fade in</animated.div>
-      <animated.div>{skillValue.interpolate(val => val.toFixed(2))}</animated.div>
+      <animated.div>{skillValue.to(val => val.toFixed(2))}</animated.div>
     </div>
   )
 }

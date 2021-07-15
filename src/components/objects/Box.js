@@ -8,13 +8,13 @@ export default function Box(props) {
 
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false)
-  const [active, setActive] = useState(false)
+  // const [active, setActive] = useState(false)
 
   // useSpring will gracefully interpolate between different states.
   const { scale, color } = useSpring({
     config: { duration: 450 },
-    scale: active ? [1.5, 1.5, 1.5] : [1, 1, 1],
-    color: hovered ? 'white' : 'black'
+    scale: hovered ? [.45,.45,.45] : [.4, .4, .4],
+    color: hovered ? 'green' : 'black'
   })
 
   // Rotate mesh every frame, this is outside of React without overhead
@@ -29,10 +29,10 @@ export default function Box(props) {
       {...props}
       ref={meshRef}
       scale={scale}
-      onClick={(event) => setActive(!active)}
+      // onClick={(event) => setActive(!active)}
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}>
-      <boxBufferGeometry args={[1, 1, 1]} />
+      <icosahedronBufferGeometry args={[1, 1, 1]} />
       <animated.meshStandardMaterial color={color} />
     </animated.mesh>
   )
