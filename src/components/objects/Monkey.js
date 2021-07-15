@@ -7,10 +7,10 @@ import React, { useRef } from 'react'
 import { useGLTF, useAnimations, useTexture } from '@react-three/drei'
 // import { RepeatWrapping } from '@three'
 
-const filePath = window.location.href + '/Monkey.glb'
+const filePath = window.location.href + '/models/Monkey.glb'
 
 export default function Model(props) {
-  const texture = useTexture(window.location.href + '/flakes.png')
+  const texture = useTexture(window.location.href + '/images/flakes.png')
 
   const materialProps = {
     clearcoat: 1.0,
@@ -26,7 +26,6 @@ export default function Model(props) {
     'normalMap-anisotropy': 16,
     transmission: 0.6,
     transparent: true
-    // opacity: .5
   }
 
   const group = useRef()

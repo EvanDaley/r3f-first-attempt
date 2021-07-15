@@ -1,5 +1,6 @@
 import './App.css';
-import Monkey from './components/Monkey'
+import Monkey from './components/objects/Monkey'
+import LoadingScreen from './components/html_scenes/LoadingScreen'
 import { OrbitControls, Stats, Html, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react'
@@ -10,7 +11,7 @@ import { Suspense } from 'react'
 //   night
 //   warehouse
 //   forest
-//   apartment
+//   apartment`
 //   studio
 //   city
 //   park
@@ -19,6 +20,8 @@ import { Suspense } from 'react'
 function App() {
   return (
     <>
+      <LoadingScreen/>
+
       <Canvas colorManagement={true} invalidateFrameloop pixelRatio={[1, 2]} camera={{ position: [0, 0, 2.75] }}>
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <directionalLight position={[-10, -10, -5]} intensity={1} />
