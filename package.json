@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "PUBLIC_URL=/ react-scripts start",
+    "dev": "  react-scripts start",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
     "ship": "npm run build && npm run deploy",
