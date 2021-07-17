@@ -1,6 +1,6 @@
 import './App.css';
 // import Monkey from './components/objects/Monkey'
-import Robot from './components/objects/Robot'
+import LinesRobot from './components/objects/LinesRobot'
 import Glass from './components/objects/Glass'
 import Box from './components/objects/Box'
 import LoadingScreen from './components/html_scenes/LoadingScreen'
@@ -34,7 +34,7 @@ function App() {
         <Suspense fallback={null}>
           <Stage environment="sunset" intensity={.5} contactShadow={true} shadows={true}>
           {/* <Glass></Glass> */}
-            <Robot />
+            <LinesRobot />
             {/* <Box position={[0,1,0]}/> */}
           </Stage>
         </Suspense>
