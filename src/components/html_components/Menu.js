@@ -4,7 +4,7 @@
 import { HamburgerButton } from "react-hamburger-button";
 import React, { useState } from 'react';
 
-function MenuContent() {
+function MenuContent({ setSelection }) {
   const overlayStyle = {
     pointerEvents: "auto",
     height: "100%",
@@ -43,13 +43,13 @@ function MenuContent() {
       <div style={overlayContentStyle}>
         <ul>
           <ol style={overlayContentStyle}>
-            <button style={buttonStyle}>Home</button>
+            <button style={buttonStyle} onClick={() => setSelection('home')}>Home</button>
           </ol>
           <ol style={overlayContentStyle}>
-            <button style={buttonStyle}>About Me</button>
+            <button style={buttonStyle} onClick={() => setSelection('about-me')}>About Me</button>
           </ol>
           <ol style={overlayContentStyle}>
-            <button style={buttonStyle}>Get in Touch</button>
+            <button style={buttonStyle} onClick={() => setSelection('get-in-touch')}>Get in Touch</button>
           </ol>
         </ul>
       </div>
@@ -57,10 +57,56 @@ function MenuContent() {
   )
 }
 
+// TODO: Move this out into a seperate component.
+function AboutMe() {
+  const overlayStyle = {
+    pointerEvents: "auto",
+    height: "100%",
+    width: "100%",
+    position: "fixed",
+    zIndex: "1",
+    top: "0",
+    left: "0",
+    backgroundColor: "black",
+    color: "white",
+    overflowX: "hidden",
+    transition: "0.1s"
+  }
+
+  const overlayContentStyle = {
+    display: "flex",
+    position: "relative",
+    top: "25%",
+    width: "100%",
+    textAlign: "left",
+    marginTop: "48px",
+    fontSize: "25px",
+  }
+
+  return (
+    <div style={overlayStyle}>
+      <div style={overlayContentStyle}>
+        <div style={{ width: "30%", display: "inline", textAlign: "right", marginRight: "20px" }}>
+          <p>[Image]</p>
+        </div>
+        <div style={{ width: "50%", display: "inline" }}>
+          <p>My name is Evan Daley and I'm a Lead Software Engineer at Two Barrels LLC. </p>
+          <p>I consider myself to be an experienced developer, leader and architect. My strongest proficiencies are JavaScript, Vue, React, Rails, AWS, Docker, and SQL. </p>
+          <p>In my free time, I like to exercise, sleep, and dig into different technologies like R, Kubernetes, GCP, and three.js. Lately I've been a bit obsessed with three.js and react-three-fiber, so thats why this site exists. </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function HTMLContent() {
   const [inMenu, setInMenu] = useState(false);
+  const [selection, setSelection] = useState('');
 
-  const handleClick = () => setInMenu(!inMenu)
+  const handleClick = () => {
+    setInMenu(!inMenu)
+    setSelection('')
+  }
 
   const headerStyle = {
     pointerEvents: "none",
@@ -88,7 +134,8 @@ export default function HTMLContent() {
         </div>
       </div>
 
-      {inMenu ? <MenuContent /> : null}
+      {inMenu ? <MenuContent setSelection={setSelection} /> : null}
+      {selection === 'about-me' ? <AboutMe /> : null}
     </>
   )
 }
