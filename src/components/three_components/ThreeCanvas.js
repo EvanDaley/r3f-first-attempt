@@ -32,11 +32,11 @@ function App() {
           </Stage>
         </Suspense>
 
-        <Stats />
+        {/* <Stats /> */}
         <OrbitControls target={[0, 1, 0]} />
       </Canvas>
 
-      <Loader />
+      {/* <Loader /> */}
     </>
   );
 }

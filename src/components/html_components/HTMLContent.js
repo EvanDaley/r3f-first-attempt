@@ -1,10 +1,13 @@
 // HTMLContent.js
-// Throw all the HTML content here.
+// Throw all the raw HTML content here. This is all rendered outside the context of the canvas,
+// so don't try to do anything fancy with Three.js.
+
+import Menu from './Menu'
 
 export default function HTMLContent() {
   return (
     <div className="html-content-container">
-      <h1>hereaasdfasdfasdfasdfasdfasdf</h1>
+      <Menu/>
     </div>
   )
 }
