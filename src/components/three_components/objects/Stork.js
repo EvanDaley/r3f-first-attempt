@@ -10,7 +10,7 @@ import { useGLTF, useAnimations, useTexture } from '@react-three/drei'
 const filePath = window.location.href + '/Monkey.glb'
 
 export default function Model(props) {
-  const texture = useTexture(window.location.href + '/flakes.png')
+  const texture = useTexture(window.location.href + '/images/flakes.png')
 
   const materialProps = {
     clearcoat: 1.0,

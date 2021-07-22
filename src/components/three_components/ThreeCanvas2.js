@@ -1,10 +1,12 @@
 import LinesRobot from './objects/LinesRobot'
+import Stork from './objects/Stork'
+import Monkey from './objects/Monkey'
 import AbstractSphere from './objects/AbstractSphere'
 import { OrbitControls, Stats, Stage, Loader, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react'
 
-export default function ThreeCanvas() {
+export default function ThreeCanvas2() {
   const environmentOptions = [
     'sunset',
     'dawn',
@@ -29,8 +31,10 @@ export default function ThreeCanvas() {
 
         <Suspense fallback={null}>
           <Stage adjustCamera={false} environment={environmentOptions[0]} intensity={.5} contactShadow={true} shadows={true}>
-            <LinesRobot />
-            {/* <AbstractSphere/> */}
+            {/* <LinesRobot /> */}
+            <AbstractSphere/>
+            {/* <Stork/> */}
+            {/* <Monkey/> */}
           </Stage>
         </Suspense>
 
