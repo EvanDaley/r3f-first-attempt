@@ -4,7 +4,7 @@ import { OrbitControls, Stats, Stage, Loader, PerspectiveCamera } from '@react-t
 import { Canvas } from '@react-three/fiber';
 import React, { useState, useEffect, Suspense } from 'react';
 
-export default function ThreeCanvas() {
+export default function ThreeCanvas({ sceneIndex }) {
   const environmentOptions = [
     'sunset',
     'dawn',
@@ -18,27 +18,6 @@ export default function ThreeCanvas() {
     'lobby',
   ]
 
-  const [count, setCount] = useState(0);
-
-  // Experiment - Changing scenes every 1 second:
-  // useEffect(() => {
-  //   setInterval(
-  //     () => { setCount(1) },
-  //     2000
-  //   )
-
-  //   setTimeout(
-  //     () => { 
-  //       setInterval(
-  //         () => { setCount(0) },
-  //         2000
-  //       )
-  //       setCount(0)
-  //      },
-  //     1000
-  //   )
-  // }, []);
-
   return (
     <>
       <Canvas colorManagement={true} invalidateFrameloop pixelRatio={[1, 2]}>
@@ -50,8 +29,8 @@ export default function ThreeCanvas() {
 
         <Suspense fallback={null}>
           <Stage adjustCamera={false} environment={environmentOptions[0]} intensity={.5} contactShadow={true} shadows={true}>
-            { count === 0 ? <LinesRobot /> : null }
-            { count === 1 ? <AbstractSphere /> : null }
+            { sceneIndex === 0 ? <LinesRobot /> : null }
+            { sceneIndex === 1 ? <AbstractSphere /> : null }
             {/* <AbstractSphere/> */}
           </Stage>
         </Suspense>

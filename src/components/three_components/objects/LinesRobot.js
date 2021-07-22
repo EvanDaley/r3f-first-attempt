@@ -39,7 +39,7 @@ export default function LinesRobot(props) {
   // Rotate mesh every frame, this is outside of React without overhead
   useFrame(() => {
     if (group.current != null) {
-      group.current.rotation.y = group.current.rotation.y += 0.01
+      group.current.rotation.y = group.current.rotation.y += 0.003
     }
   })
 
