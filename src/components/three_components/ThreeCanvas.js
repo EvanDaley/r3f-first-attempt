@@ -29,8 +29,8 @@ function App() {
 
         <Suspense fallback={null}>
           <Stage adjustCamera={false} environment={environmentOptions[0]} intensity={.5} contactShadow={true} shadows={true}>
-            {/* <LinesRobot /> */}
-            <AbstractSphere/>
+            <LinesRobot />
+            {/* <AbstractSphere/> */}
           </Stage>
         </Suspense>
 
