@@ -2,7 +2,7 @@ import LinesRobot from './objects/LinesRobot'
 import AbstractSphere from './objects/AbstractSphere'
 import { OrbitControls, Stats, Stage, Loader, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react'
+import React, { useState, useEffect, Suspense } from 'react';
 
 export default function ThreeCanvas() {
   const environmentOptions = [
@@ -18,6 +18,27 @@ export default function ThreeCanvas() {
     'lobby',
   ]
 
+  const [count, setCount] = useState(0);
+
+  // Experiment - Changing scenes every 1 second:
+  // useEffect(() => {
+  //   setInterval(
+  //     () => { setCount(1) },
+  //     2000
+  //   )
+
+  //   setTimeout(
+  //     () => { 
+  //       setInterval(
+  //         () => { setCount(0) },
+  //         2000
+  //       )
+  //       setCount(0)
+  //      },
+  //     1000
+  //   )
+  // }, []);
+
   return (
     <>
       <Canvas colorManagement={true} invalidateFrameloop pixelRatio={[1, 2]}>
@@ -29,7 +50,8 @@ export default function ThreeCanvas() {
 
         <Suspense fallback={null}>
           <Stage adjustCamera={false} environment={environmentOptions[0]} intensity={.5} contactShadow={true} shadows={true}>
-            <LinesRobot />
+            { count === 0 ? <LinesRobot /> : null }
+            { count === 1 ? <AbstractSphere /> : null }
             {/* <AbstractSphere/> */}
           </Stage>
         </Suspense>
