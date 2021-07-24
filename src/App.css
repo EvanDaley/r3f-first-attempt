@@ -34,8 +34,12 @@ body {
   background: -moz-linear-gradient(90deg, #134E5E 10%, #71B280 90%);
   background: -ms-linear-gradient(90deg, #134E5E 10%, #71B280 90%);
   background: -o-linear-gradient(90deg, #134E5E 10%, #71B280 90%);
-  background: linear-gradient(90deg, #134E5E 10%, #71B280 90%);
+  background: linear-gradient(90deg, #134E5E 10%, #134E5E 90%);
 }
+/* 
+body {
+  background: linear-gradient(90deg, black 10%, black 90%);
+} */
 
 .flex-container {
   display: flex;
