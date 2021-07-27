@@ -13,6 +13,7 @@ export default function OxygenContainer2(props) {
     metalness: 0.0,
     roughness: 0.1,
     color: 'teal',
+    // color: '#195e23',
     normalMap: texture,
     normalScale: [0.3, 0.3],
     'normalMap-wrapS': THREE.RepeatWrapping,
