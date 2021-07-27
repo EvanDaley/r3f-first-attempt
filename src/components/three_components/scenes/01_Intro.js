@@ -28,9 +28,17 @@ export default function Intro({ sceneIndex }) {
       {/* <pointLight position={[10, 10, 10]} /> */}
 
       <Stage adjustCamera={false} environment={environmentOptions[0]} intensity={.5} contactShadow={true} shadows={true}>
-        <OxygenContainer position={[-6,0,0]}/>
-        <OxygenContainer2 />
-        <OxygenContainer3 position={[6,0,0]}/>
+        <OxygenContainer position={[-6, 0, 0]} rotation={[0, 90, 0]} />
+        <AbstractSphere animationOffset={[-6, 2, 0]} color="black" />
+        <AbstractSphere scale={[0.7, 0.7, 0.7]} animationOffset={[-6, 2, 0]} color="black" />
+
+        <OxygenContainer2 rotation={[0, 80, 0]} />
+        <AbstractSphere animationOffset={[0, 2, 0]} color="#bbbbbb" />
+        <AbstractSphere scale={[0.7, 0.7, 0.7]} animationOffset={[0, 2, 0]} color="#bbbbbb" />
+
+        <OxygenContainer3 rotation={[0, 90, 0]} position={[6, 0, 0]} />
+        <AbstractSphere animationOffset={[6, 2, 0]} color="red" />
+        <AbstractSphere scale={[0.7, 0.7, 0.7]} animationOffset={[6, 2, 0]} color="red" />
       </Stage>
     </>
   );

@@ -2,7 +2,7 @@ import React, { useRef, useMemo } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 import { useFrame } from "@react-three/fiber"
-const filePath = window.location.href + '/models/OxygenContainer.glb'
+const filePath = window.location.href + '/models/OxygenContainer2.glb'
 
 export default function OxygenContainer(props) {
   const texture = useTexture(window.location.href + '/images/flakes.png')
@@ -52,7 +52,7 @@ export default function OxygenContainer(props) {
         geometry={nodes.Container.geometry}
         material={materials['Material.003']}
       />
-      <mesh
+      {/* <mesh
         castShadow
         receiveShadow
         geometry={nodes.Plant.geometry}
@@ -60,7 +60,7 @@ export default function OxygenContainer(props) {
         position={[0.1, 2.21, -0.25]}
         rotation={[-0.38, -0.26, -0.11]}
         scale={[0.33, 0.33, 0.33]}
-      />
+      /> */}
       {/* <mesh
         castShadow
         receiveShadow
@@ -94,13 +94,13 @@ export default function OxygenContainer(props) {
         material={materials['Material.002']}
         position={[0, 0.01, 0]}
       />
-      <mesh
+      {/* <mesh
         castShadow
         receiveShadow
         geometry={nodes.Container002.geometry}
         material={nodes.Container002.material}
         position={[0, 0.01, 0]}
-      />
+      /> */}
     </group>
   )
 }
