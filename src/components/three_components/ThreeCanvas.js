@@ -17,8 +17,8 @@ export default function ThreeCanvas({ sceneIndex }) {
         </Suspense>
 
         {/* <Stats /> */}
-        <PerspectiveCamera makeDefault position={[0, 3, 20]} />
-        <OrbitControls target={[0, 1, 0]} />
+        <PerspectiveCamera makeDefault position={[8, 4, 13]} />
+        <OrbitControls target={[1, 1, 0]} />
 
       </Canvas>
 
