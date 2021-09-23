@@ -36,13 +36,6 @@ More examples are coming soon !
 ~~-  [`r3f-perf`](https://github.com/RenaudRohlinger/r3f-perf) &ndash; Easily monitor the performances of your React-Three-Fiber application~~ was causing frame drops use <Stats /> from 'drei' instead
 - [`react-three-gui`](https://github.com/ueno-llc/react-three-gui) &ndash; GUI/debug tools
 
-## Showoff
-
-- [Jacob's Creek Wine Guide](https://experiencejacobscreek.com/test) - Made by the [AutoVRse](https://autovrse.in) Team for Jacob's Creek India
-- [Car Configurator](https://webxr.autovrse.in/3d-automotive-configurator) - becoming open source soon !
-
-## Available NPM Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
